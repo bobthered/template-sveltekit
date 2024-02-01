@@ -1,6 +1,6 @@
 {
   "name": "template-sveltekit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Template for Sveltekit Projects",
   "main": "index.js",
   "scripts": {
