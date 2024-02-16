@@ -1,11 +1,10 @@
+import { hooks } from '$lib/config';
 import { prisma } from '$lib/prisma';
 import type { Handle } from '@sveltejs/kit';
 
-const unauthenticatedRoutes = ['/forgot-password', '/sign-in', '/sign-up'];
-
 export const handle: Handle = async ({ event, resolve }) => {
 	// check if route requires authentication
-	if (!unauthenticatedRoutes.includes(event.url.pathname)) {
+	if (!hooks.unauthenticatedRoutes.includes(event.url.pathname)) {
 		// get session_id
 		const id = event.cookies.get('session_id');
 		if (id === undefined || id === null)
