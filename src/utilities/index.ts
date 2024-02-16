@@ -1,1 +1,2 @@
-export * from 'sveltewind/utilities'
+export * from 'sveltewind/utilities';
+export { convert } from './convert';
